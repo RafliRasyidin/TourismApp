@@ -2,22 +2,21 @@ package com.rasyidin.tourismapp.home
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rasyidin.tourismapp.R
 import com.rasyidin.tourismapp.core.data.Resource
 import com.rasyidin.tourismapp.core.ui.TourismAdapter
-import com.rasyidin.tourismapp.core.ui.ViewModelFactory
 import com.rasyidin.tourismapp.databinding.FragmentHomeBinding
 import com.rasyidin.tourismapp.detail.DetailTourismActivity
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private val homeViewModel: HomeViewModel by viewModel()
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -42,9 +41,6 @@ class HomeFragment : Fragment() {
                 startActivity(intent)
             }
 
-            val factory = ViewModelFactory.getInstance(requireActivity())
-            homeViewModel = ViewModelProvider(this, factory)[HomeViewModel::class.java]
-
             homeViewModel.tourism.observe(viewLifecycleOwner, { tourism ->
                 if (tourism != null) {
                     when (tourism) {
@@ -56,7 +52,8 @@ class HomeFragment : Fragment() {
                         is Resource.Error -> {
                             binding.progressBar.visibility = View.GONE
                             binding.viewError.root.visibility = View.VISIBLE
-                            binding.viewError.tvError.text = tourism.message ?: getString(R.string.something_wrong)
+                            binding.viewError.tvError.text =
+                                tourism.message ?: getString(R.string.something_wrong)
                         }
                     }
                 }
