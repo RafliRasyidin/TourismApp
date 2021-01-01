@@ -19,12 +19,8 @@ r
 Bapp/src/main/java/com/rasyidin/tourismapp/core/utils/JsonHelper.kt,2\b\2b842819f9fd6b684d5762a185ed4a1cbe2df86c
 
 ]app/src/main/java/com/rasyidin/tourismapp/core/data/source/remote/response/TourismResponse.kt,d\c\dc796bc190811f26dc43ee86fa80d2283fe9e8a7
-n
->app/src/main/java/com/rasyidin/tourismapp/core/di/Injection.kt,2\e\2e2dff21163ac184172719fb8d743b90d7d294a3
 z
 Japp/src/main/java/com/rasyidin/tourismapp/detail/DetailTourismViewModel.kt,3\f\3f4c22fe1c1ec45655fbe0d7a4787a1179ceef39
-u
-Eapp/src/main/java/com/rasyidin/tourismapp/core/ui/ViewModelFactory.kt,8\b\8bb1e1b71ed0553ca8bf1ceb2b12f40acb0e7fbe
 s
 Capp/src/main/java/com/rasyidin/tourismapp/core/ui/TourismAdapter.kt,6\0\60f059bc31fa4e9ca9d5ba00271ae2d2370db3aa
 o
@@ -67,3 +63,9 @@ Aapp/src/main/java/com/rasyidin/tourismapp/core/utils/Constants.kt,e\1\e17298f2
 Wapp/src/main/java/com/rasyidin/tourismapp/core/data/source/remote/network/ApiService.kt,d\c\dc5f8bc970b783f6364b75818f47259dd71aeabd
 †
 Vapp/src/main/java/com/rasyidin/tourismapp/core/data/source/remote/network/ApiConfig.kt,e\0\e0fb56a4fbbedb87c9934c96361a9e5d4973e769
+o
+?app/src/main/java/com/rasyidin/tourismapp/core/di/CoreModule.kt,7\2\721ecd2a1c91dbaee971b934c18cb6d47ba32d28
+i
+9app/src/main/java/com/rasyidin/tourismapp/di/AppModule.kt,c\9\c977dec98cf9f93a7e0a004a4e80927ae44e7c91
+j
+:app/src/main/java/com/rasyidin/tourismapp/MyApplication.kt,8\6\86ee3402afa272682095b00a262e674e146bd41b
