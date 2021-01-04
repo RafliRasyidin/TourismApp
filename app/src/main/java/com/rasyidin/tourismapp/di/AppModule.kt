@@ -1,7 +1,7 @@
 package com.rasyidin.tourismapp.core.di
 
-import com.rasyidin.tourismapp.core.domain.usecase.TourismInteractor
-import com.rasyidin.tourismapp.core.domain.usecase.TourismUseCase
+import com.rasyidin.core.domain.usecase.TourismInteractor
+import com.rasyidin.core.domain.usecase.TourismUseCase
 import com.rasyidin.tourismapp.detail.DetailTourismViewModel
 import com.rasyidin.tourismapp.favorite.FavoriteViewModel
 import com.rasyidin.tourismapp.home.HomeViewModel

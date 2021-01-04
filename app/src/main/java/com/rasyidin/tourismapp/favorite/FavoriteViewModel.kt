@@ -2,7 +2,7 @@ package com.rasyidin.tourismapp.favorite
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import com.rasyidin.tourismapp.core.domain.usecase.TourismUseCase
+import com.rasyidin.core.domain.usecase.TourismUseCase
 
 class FavoriteViewModel(tourismUseCase: TourismUseCase) : ViewModel() {
 

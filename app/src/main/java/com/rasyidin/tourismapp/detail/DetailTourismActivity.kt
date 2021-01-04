@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
+import com.rasyidin.core.domain.model.Tourism
 import com.rasyidin.tourismapp.R
-import com.rasyidin.tourismapp.core.domain.model.Tourism
 import com.rasyidin.tourismapp.databinding.ActivityDetailTourismBinding
 import org.koin.android.viewmodel.ext.android.viewModel
 

@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.rasyidin.core.data.Resource
+import com.rasyidin.core.ui.TourismAdapter
 import com.rasyidin.tourismapp.R
-import com.rasyidin.tourismapp.core.data.Resource
-import com.rasyidin.tourismapp.core.ui.TourismAdapter
 import com.rasyidin.tourismapp.databinding.FragmentHomeBinding
 import com.rasyidin.tourismapp.detail.DetailTourismActivity
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -24,7 +24,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -41,15 +41,15 @@ class HomeFragment : Fragment() {
                 startActivity(intent)
             }
 
-            homeViewModel.tourism.observe(viewLifecycleOwner, { tourism ->
+            homeViewModel.tourism.observe(viewLifecycleOwner) { tourism ->
                 if (tourism != null) {
                     when (tourism) {
-                        is Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
-                        is Resource.Success -> {
+                        is Resource.Loading<*> -> binding.progressBar.visibility = View.VISIBLE
+                        is Resource.Success<*> -> {
                             binding.progressBar.visibility = View.GONE
                             tourismAdapter.setData(tourism.data)
                         }
-                        is Resource.Error -> {
+                        is Resource.Error<*> -> {
                             binding.progressBar.visibility = View.GONE
                             binding.viewError.root.visibility = View.VISIBLE
                             binding.viewError.tvError.text =
@@ -57,7 +57,7 @@ class HomeFragment : Fragment() {
                         }
                     }
                 }
-            })
+            }
 
             with(binding.rvTourism) {
                 layoutManager = LinearLayoutManager(context)

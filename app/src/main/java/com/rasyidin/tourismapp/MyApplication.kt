@@ -1,6 +1,9 @@
 package com.rasyidin.tourismapp
 
 import android.app.Application
+import com.rasyidin.core.di.databaseModule
+import com.rasyidin.core.di.networkModule
+import com.rasyidin.core.di.repositoryModule
 import com.rasyidin.tourismapp.core.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger

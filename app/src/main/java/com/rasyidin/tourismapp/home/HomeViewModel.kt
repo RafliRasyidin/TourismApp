@@ -2,7 +2,7 @@ package com.rasyidin.tourismapp.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import com.rasyidin.tourismapp.core.domain.usecase.TourismUseCase
+import com.rasyidin.core.domain.usecase.TourismUseCase
 
 class HomeViewModel(tourismUseCase: TourismUseCase) : ViewModel() {
 
